@@ -5,7 +5,6 @@ using UnityEngine;
 public class ZoneA : MonoBehaviour
 {
     [SerializeField] GameObject LeftBar1;
-    public float torque;
     public Rigidbody2D rb2D;
     private float angleA;
     // Start is called before the first frame update
@@ -16,28 +15,21 @@ public class ZoneA : MonoBehaviour
         //Quaternion quaternion = LeftBar1.transform.rotation;
     }
 
-    /*void OnMouseDown()
+    void OnMouseDrag()
     {
-        for (angleA = 340; angleA <= 375f; angleA += 5f)
-        {
-            Debug.Log("angleA = " + angleA);
-        }
+        rb2D.AddTorque(15f, ForceMode2D.Impulse);
     }
 
-    private void OnMouseExit()
+    /*void OnMouseExit()
     {
-        for (angleA = 375f; 340f <= angleA ; angleA += 5f)
-        {
-            Debug.Log("angleA = " + angleA);
-        }
-    }
+    }*/
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         quaternion.eulerAngles.z = angleA;
     }*/
 
-    void FixedUpdate()
+    /*void FixedUpdate()
     {
         if (Input.GetMouseButton(1))
         {
@@ -49,5 +41,13 @@ public class ZoneA : MonoBehaviour
         {
             rb2D.AddTorque(-LeftBar1.transform.up.z * torque, ForceMode2D.Impulse);
         }
-    }
+    }*/
+
+    /*void OnMouseDown()
+    {
+            rb2D.AddTorque(LeftBar1.transform.up.z * torque, ForceMode2D.Impulse);
+        }
+        */
+
+
 }
