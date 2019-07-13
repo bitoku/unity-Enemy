@@ -34,7 +34,7 @@ public class VirusController : MonoBehaviour
         if (isMoving)
         {
             float t = delta / moveSpan;
-            float progress = t - Mathf.Sin(2 * Mathf.PI * t) / (2 * Mathf.PI)
+            float progress = t - Mathf.Sin(2 * Mathf.PI * t) / (2 * Mathf.PI);
             Vector3 stepPos = directionPos * progress + beforePos;
             transform.position = stepPos;
         }
