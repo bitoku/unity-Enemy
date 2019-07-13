@@ -39,4 +39,9 @@ public class VirusController : MonoBehaviour
             transform.position = stepPos;
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject);
+    }
 }
