@@ -17,7 +17,7 @@ public class ZoneA : MonoBehaviour
 
     void OnMouseDrag()
     {
-        rb2D.AddTorque(15f, ForceMode2D.Impulse);
+        rb2D.angularVelocity = 2880.0f;
     }
 
     /*void OnMouseExit()
