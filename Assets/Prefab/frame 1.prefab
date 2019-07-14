@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8492881376136396769}
   - component: {fileID: 1996528722593653253}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: DiagonalCollider2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006638980449068590}
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: 1.83, y: -2.68, z: 0}
+  m_LocalPosition: {x: 1.73, y: -2.7, z: 0}
   m_LocalScale: {x: 1.0105758, y: 1.0105758, z: 1}
   m_Children: []
   m_Father: {fileID: 6476390123856480190}
@@ -67,7 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1486403431965299582}
   - component: {fileID: 4205012902066185202}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: DiagonalCollider1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 3184808499825565848}
   - component: {fileID: 5808408280773712895}
   - component: {fileID: 5327168436744099015}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: frame 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
