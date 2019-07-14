@@ -7,7 +7,6 @@ public class BallController : MonoBehaviour
     private float DestroyTime;
     private float BallTimer;
     public GameObject ballPrefab;
-    const float span = 5.0f;
     const float initialForce = 500.0f;
     public float centerx;
 
@@ -18,13 +17,22 @@ public class BallController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        BallTimer += Time.deltaTime;
+        if ( gameObject.activeSelf)
+        {
+            BallTimer += Time.deltaTime;
+        }
+        else
+        {
+
+        }
 
         if (transform.position.y < -10)
         {
             gameObject.SetActive(false);
+            enabled = false;
             DestroyTime = BallTimer;
             Debug.Log(BallTimer);
+            enabled = true;
         }
         if(BallTimer > DestroyTime + 2.0f)
         {
@@ -33,6 +41,7 @@ public class BallController : MonoBehaviour
             Rigidbody2D rigid = ball.GetComponent<Rigidbody2D>();
             Vector3 direction = new Vector3(Random.Range(-0.05f, 0.05f), 1, 0);
             rigid.AddForce(direction * initialForce);
+            BallTimer = 0f;
         }
     }
 }

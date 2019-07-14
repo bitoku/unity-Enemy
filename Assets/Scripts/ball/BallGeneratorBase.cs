@@ -5,7 +5,7 @@ using UnityEngine;
 public class BallGeneratorBase : MonoBehaviour
 {
     public GameObject ballPrefab;
-    const float span = 5.0f;
+    const float span = 4.0f;
     const float initialForce = 500.0f;
     float delta = 0;
     public float centerx;
