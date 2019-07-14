@@ -6,7 +6,7 @@ public class BallGeneratorBase : MonoBehaviour
 {
     public GameObject ballPrefab;
     const float span = 1.0f;
-    const float initialForce = 500.0f;
+    const float initialForce = 400.0f;
     float delta = 0;
     public float centerx;
 

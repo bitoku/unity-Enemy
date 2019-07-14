@@ -14,7 +14,7 @@ public abstract class VirusControllerBase : MonoBehaviour
 
     public void Start()
 	{
-		manager = GameObject.Find("ScoreManager");
+		manager = GameObject.Find("ScoreDirector");
 	}
 
     // Update is called once per frame
@@ -26,7 +26,7 @@ public abstract class VirusControllerBase : MonoBehaviour
             delta = 0;
             isMoving = !isMoving;
             beforePos = gameObject.transform.position;
-            Vector3 nextPos = new Vector3(centerx + Random.Range(-2f, 2f), Random.Range(0f, 3f), 0);
+            Vector3 nextPos = new Vector3(centerx + Random.Range(-1.8f, 1.8f), Random.Range(-0.5f, 2.5f), 0);
             directionPos = nextPos - beforePos;
         }
 
