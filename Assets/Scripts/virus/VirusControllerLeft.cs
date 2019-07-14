@@ -12,6 +12,9 @@ public class VirusControllerLeft : VirusControllerBase
 
     public override void ScoreUp()
 	{
-		manager.GetComponent<ScoreDirector>().ScoreUp1();
+        Debug.Log("prefab");
+        Debug.Log(GetComponent<AudioSource>().clip);
+        GetComponent<AudioSource>().Play();
+        manager.GetComponent<ScoreDirector>().ScoreUp1();
 	}
 }

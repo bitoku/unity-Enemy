@@ -22,6 +22,7 @@ public class VirusGeneratorBase : MonoBehaviour
         {
             delta = 0;
             GameObject virus = Instantiate(virusPrefab) as GameObject;
+            Debug.Log(virus.GetComponent<AudioSource>().clip);
             virus.transform.position = new Vector3(centerx, 6, 0);
             span *= 0.98f;
         }

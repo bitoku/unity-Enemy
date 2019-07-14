@@ -30,7 +30,6 @@ public class TouchController : MonoBehaviour
             if (0 <= touch.position.x && touch.position.x < 512)
             {
                 rigidLeft1.angularVelocity = 4000.0f;
-                Debug.Log(rigidLeft1.rotation);
             }
             else if (512 <= touch.position.x && touch.position.x < 1024)
             {

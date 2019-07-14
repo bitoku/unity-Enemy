@@ -9,8 +9,8 @@ public class ScoreDirector : MonoBehaviour
     GameObject score1UI;
     GameObject score2UI;
 
-    public Text Winer1;
-    public Text Winer2;
+    public Text Winner1;
+    public Text Winner2;
 
     void Start()
     {
@@ -24,18 +24,18 @@ public class ScoreDirector : MonoBehaviour
         {
             if (ScoreManager.score1 > ScoreManager.score2)
             {
-                Winer1.text = "WINER!!";
-                Winer2.text = "";
+                Winner1.text = "WINNER!!";
+                Winner2.text = "";
             }
             else if (ScoreManager.score1 < ScoreManager.score2)
             {
-                Winer1.text = "";
-                Winer2.text = "WINER!!";
+                Winner1.text = "";
+                Winner2.text = "WINNER!!";
             }
             else
             {
-                Winer1.text = "DRAW";
-                Winer2.text = "DRAW";
+                Winner1.text = "DRAW";
+                Winner2.text = "DRAW";
             }
         }
     }

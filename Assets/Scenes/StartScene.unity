@@ -229,8 +229,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92db215dcf29845f99dc7d57d3e4fcc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Winer1: {fileID: 354353872}
-  Winer2: {fileID: 406513422}
+  Winner1: {fileID: 0}
+  Winner2: {fileID: 0}
 --- !u!1 &287263869
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 354353873}
   - component: {fileID: 354353872}
   m_Layer: 5
-  m_Name: WinerText1
+  m_Name: WinnerText1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 406513423}
   - component: {fileID: 406513422}
   m_Layer: 5
-  m_Name: WinerText2
+  m_Name: WinnerText2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -775,8 +775,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92db215dcf29845f99dc7d57d3e4fcc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Winer1: {fileID: 354353872}
-  Winer2: {fileID: 406513422}
+  Winner1: {fileID: 0}
+  Winner2: {fileID: 0}
 --- !u!1 &1483027715
 GameObject:
   m_ObjectHideFlags: 0

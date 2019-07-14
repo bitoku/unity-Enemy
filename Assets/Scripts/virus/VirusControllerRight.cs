@@ -11,7 +11,7 @@ public class VirusControllerRight : VirusControllerBase
     }
 
     public override void ScoreUp()
-	{
-		manager.GetComponent<ScoreDirector>().ScoreUp2();
+    {
+        manager.GetComponent<ScoreDirector>().ScoreUp2();
 	}
 }

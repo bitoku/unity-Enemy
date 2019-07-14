@@ -9,10 +9,12 @@ public class TimeManager : MonoBehaviour
     public static float time;
     public Image UIobj;
     public Text timeText;
+    bool finished;
 
     // Start is called before the first frame update
     void Start()
     {
+        finished = false;
         time = 0f;
         UIobj.fillAmount = 0f;
     }
@@ -32,6 +34,13 @@ public class TimeManager : MonoBehaviour
         {
             timeText.text = RemainTime.ToString();
         }
+
+        if (!finished && time > 30f)
+        {
+            finished = true;
+            GetComponent<AudioSource>().Play();
+        }
+
         if( time > 35f )
         {
             SceneManager.LoadScene("StartScene");

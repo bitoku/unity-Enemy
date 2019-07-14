@@ -44,10 +44,9 @@ public abstract class VirusControllerBase : MonoBehaviour
         {
             return;
         }
-
         ScoreUp();
 		Destroy(gameObject);
     }
 
-	public abstract void ScoreUp();
+    public abstract void ScoreUp();
 }
