@@ -27,15 +27,15 @@ public class TouchController : MonoBehaviour
         for (int i = 0; i < Input.touchCount; i++)
         {
             Touch touch = Input.touches[i];
-            if (0 <= touch.position.x && touch.position.x < 512)
+            if (0 <= touch.position.x && touch.position.x < Screen.width/4)
             {
                 rigidLeft1.angularVelocity = 4000.0f;
             }
-            else if (512 <= touch.position.x && touch.position.x < 1024)
+            else if (Screen.width/4 <= touch.position.x && touch.position.x < Screen.width*2/4)
             {
                 rigidRight1.angularVelocity = -4000.0f;
             }
-            else if (1024 <= touch.position.x && touch.position.x < 1536)
+            else if (Screen.width*2/4 <= touch.position.x && touch.position.x < Screen.width*3/4)
             {
                 rigidLeft2.angularVelocity = 4000.0f;
             }

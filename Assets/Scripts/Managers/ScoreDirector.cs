@@ -52,6 +52,18 @@ public class ScoreDirector : MonoBehaviour
         score2UI.GetComponent<Text>().text = ScoreManager.score2.ToString();
     }
 
+    public void ScoreDown1()
+    {
+        ScoreManager.score1 -= 10;
+        score1UI.GetComponent<Text>().text = ScoreManager.score1.ToString();
+    }
+
+    public void ScoreDown2()
+    {
+        ScoreManager.score2 -= 10;
+        score2UI.GetComponent<Text>().text = ScoreManager.score2.ToString();
+    }
+
     public void OnClick()
     {
         ScoreManager.score1 = 0;

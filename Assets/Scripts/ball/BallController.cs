@@ -10,14 +10,17 @@ public class BallController : MonoBehaviour
     const float initialForce = 320.0f;
     public float centerx;
     bool alive = true;
+    GameObject scoreDirector;
 
     private void Start()
     {
-
+        scoreDirector = GameObject.Find("ScoreDirector");
     }
     // Update is called once per frame
     void Update()
     {
+        if (TimeManager.time > 30.0f) return;
+
         if (!alive)
         {
             BallTimer += Time.deltaTime;
@@ -25,6 +28,14 @@ public class BallController : MonoBehaviour
 
         if (alive && transform.position.y < -6)
         {
+            if (centerx < 0)
+            {
+                scoreDirector.GetComponent<ScoreDirector>().ScoreDown1();
+            }
+            else
+            {
+                scoreDirector.GetComponent<ScoreDirector>().ScoreDown2();
+            }
             alive = false;
             BallTimer = 0f;
         }
