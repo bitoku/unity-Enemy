@@ -40,7 +40,12 @@ public abstract class VirusControllerBase : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-		ScoreUp();
+        if (TimeManager.time > 30.0f)
+        {
+            return;
+        }
+
+        ScoreUp();
 		Destroy(gameObject);
     }
 
