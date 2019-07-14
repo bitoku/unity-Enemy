@@ -6,6 +6,7 @@ public class VirusControllerRight : VirusControllerBase
 {
     void Start()
     {
+        base.Start();
         centerx = 3.333f;
     }
 

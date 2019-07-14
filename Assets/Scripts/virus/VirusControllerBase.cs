@@ -12,7 +12,7 @@ public abstract class VirusControllerBase : MonoBehaviour
     public float centerx;
 	public GameObject manager;
 
-    void Start()
+    public void Start()
 	{
 		manager = GameObject.Find("ScoreManager");
 	}
