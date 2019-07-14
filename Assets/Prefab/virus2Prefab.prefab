@@ -97,6 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   centerx: 0
   manager: {fileID: 0}
+  sound: {fileID: 8300000, guid: 30cc24e24758147399195680144c95de, type: 3}
 --- !u!58 &8748877901852161583
 CircleCollider2D:
   m_ObjectHideFlags: 0

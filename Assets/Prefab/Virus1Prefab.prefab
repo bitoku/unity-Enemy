@@ -134,6 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   centerx: 0
   manager: {fileID: 0}
+  sound: {fileID: 8300000, guid: 30cc24e24758147399195680144c95de, type: 3}
 --- !u!82 &6047249419712956202
 AudioSource:
   m_ObjectHideFlags: 0
@@ -152,7 +153,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 24
+  Priority: 128
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

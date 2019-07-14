@@ -11,6 +11,7 @@ public abstract class VirusControllerBase : MonoBehaviour
     Vector3 directionPos;
     public float centerx;
 	public GameObject manager;
+    public AudioClip sound;
 
     public void Start()
 	{
@@ -44,8 +45,11 @@ public abstract class VirusControllerBase : MonoBehaviour
         {
             return;
         }
+        //Debug.Log("Hit");
+        //GetComponent<AudioSource>().Play();
+        AudioSource.PlayClipAtPoint(sound, transform.position);
+        Destroy(gameObject);
         ScoreUp();
-		Destroy(gameObject);
     }
 
     public abstract void ScoreUp();
