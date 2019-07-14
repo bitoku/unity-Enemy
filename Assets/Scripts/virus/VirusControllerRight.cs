@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class VirusControllerRight : VirusControllerBase
 {
-    void Start()
+    new void Start()
     {
+        base.Start();
         centerx = 3.333f;
     }
 
     public override void ScoreUp()
 	{
-		manager.GetComponent<ScoreManager>().ScoreUp2();
+		manager.GetComponent<ScoreDirector>().ScoreUp2();
 	}
 }
