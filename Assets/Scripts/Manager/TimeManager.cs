@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TimeManager : MonoBehaviour
 {
@@ -30,6 +31,10 @@ public class TimeManager : MonoBehaviour
         if( 0 <= RemainTime && time <= 30f )
         {
             timeText.text = RemainTime.ToString();
+        }
+        if( time > 35f )
+        {
+            SceneManager.LoadScene("StartScene");
         }
     }
 }
