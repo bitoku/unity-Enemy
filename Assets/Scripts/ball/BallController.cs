@@ -9,36 +9,32 @@ public class BallController : MonoBehaviour
     public GameObject ballPrefab;
     const float initialForce = 500.0f;
     public float centerx;
+    bool alive = true;
 
     private void Start()
     {
-        BallTimer = 0f;
+
     }
     // Update is called once per frame
     void Update()
     {
-        if ( gameObject.activeSelf)
+        if (!alive)
         {
             BallTimer += Time.deltaTime;
         }
-        else
-        {
 
+        if (alive && transform.position.y < -6)
+        {
+            alive = false;
+            BallTimer = 0f;
         }
 
-        if (transform.position.y < -10)
+        if(BallTimer > 2.0f && !alive)
         {
-            gameObject.SetActive(false);
-            enabled = false;
-            DestroyTime = BallTimer;
-            Debug.Log(BallTimer);
-            enabled = true;
-        }
-        if(BallTimer > DestroyTime + 2.0f)
-        {
-            GameObject ball = Instantiate(ballPrefab) as GameObject;
-            ball.transform.position = new Vector3(centerx, -6, 0);
-            Rigidbody2D rigid = ball.GetComponent<Rigidbody2D>();
+            alive = true;
+            transform.position = new Vector3(centerx, -5, 0);
+            Rigidbody2D rigid = GetComponent<Rigidbody2D>();
+            rigid.velocity = new Vector3(0, 0, 0);
             Vector3 direction = new Vector3(Random.Range(-0.05f, 0.05f), 1, 0);
             rigid.AddForce(direction * initialForce);
             BallTimer = 0f;
