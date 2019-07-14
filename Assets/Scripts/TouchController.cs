@@ -29,19 +29,20 @@ public class TouchController : MonoBehaviour
             Touch touch = Input.touches[i];
             if (0 <= touch.position.x && touch.position.x < 512)
             {
-                rigidLeft1.angularVelocity = 2880.0f;
+                rigidLeft1.angularVelocity = 4000.0f;
+                Debug.Log(rigidLeft1.rotation);
             }
             else if (512 <= touch.position.x && touch.position.x < 1024)
             {
-                rigidRight1.angularVelocity = -2880.0f;
+                rigidRight1.angularVelocity = -4000.0f;
             }
             else if (1024 <= touch.position.x && touch.position.x < 1536)
             {
-                rigidLeft2.angularVelocity = 2880.0f;
+                rigidLeft2.angularVelocity = 4000.0f;
             }
             else
             {
-                rigidRight2.angularVelocity = -2880.0f;
+                rigidRight2.angularVelocity = -4000.0f;
             }
         }
     }

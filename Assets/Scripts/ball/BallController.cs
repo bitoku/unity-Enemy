@@ -7,7 +7,7 @@ public class BallController : MonoBehaviour
     private float DestroyTime;
     private float BallTimer;
     public GameObject ballPrefab;
-    const float initialForce = 500.0f;
+    const float initialForce = 320.0f;
     public float centerx;
     bool alive = true;
 
@@ -32,11 +32,9 @@ public class BallController : MonoBehaviour
         if(BallTimer > 2.0f && !alive)
         {
             alive = true;
-            transform.position = new Vector3(centerx, -5, 0);
+            transform.position = new Vector3(centerx+1, -1, 0);
             Rigidbody2D rigid = GetComponent<Rigidbody2D>();
             rigid.velocity = new Vector3(0, 0, 0);
-            Vector3 direction = new Vector3(Random.Range(-0.05f, 0.05f), 1, 0);
-            rigid.AddForce(direction * initialForce);
             BallTimer = 0f;
         }
     }

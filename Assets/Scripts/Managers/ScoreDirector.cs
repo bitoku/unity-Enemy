@@ -20,20 +20,23 @@ public class ScoreDirector : MonoBehaviour
         score1UI.GetComponent<Text>().text = ScoreManager.score1.ToString();
         score2UI.GetComponent<Text>().text = ScoreManager.score2.ToString();
 
-        if(ScoreManager.score1 > ScoreManager.score2)
+        if (SceneManager.GetActiveScene().name == "StartScene")
         {
-            Winer1.text = "WINER!!";
-            Winer2.text = "";
-        }
-        if (ScoreManager.score1 < ScoreManager.score2)
-        {
-            Winer1.text = "";
-            Winer2.text = "WINER!!";
-        }
-        if (ScoreManager.score1 == ScoreManager.score2)
-        {
-            Winer1.text = "DRAW";
-            Winer2.text = "DRAW";
+            if (ScoreManager.score1 > ScoreManager.score2)
+            {
+                Winer1.text = "WINER!!";
+                Winer2.text = "";
+            }
+            else if (ScoreManager.score1 < ScoreManager.score2)
+            {
+                Winer1.text = "";
+                Winer2.text = "WINER!!";
+            }
+            else
+            {
+                Winer1.text = "DRAW";
+                Winer2.text = "DRAW";
+            }
         }
     }
 
@@ -51,6 +54,8 @@ public class ScoreDirector : MonoBehaviour
 
     public void OnClick()
     {
+        ScoreManager.score1 = 0;
+        ScoreManager.score2 = 0;
         SceneManager.LoadScene("GameScene");
     }
 }

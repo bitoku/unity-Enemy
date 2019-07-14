@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6838522759155539735}
   - component: {fileID: 6838522759155539732}
   - component: {fileID: 8609433546379085105}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BallPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,3 +132,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballPrefab: {fileID: 6838522759155539733}
+  centerx: 0
