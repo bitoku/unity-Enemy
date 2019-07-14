@@ -16,7 +16,6 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(System.String.Format("{0}, {1}", score1, score2));
     }
 
     public void ScoreUp1()
