@@ -2,32 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VirusController : MonoBehaviour
+public abstract class VirusControllerBase : MonoBehaviour
 {
-    float moveSpan = 0.5f;
-    float delta;
-    bool isMoving;
+    const float moveSpan = 0.5f;
+    float delta = 0;
+    bool isMoving = false;
     Vector3 beforePos;
-    Vector3 nextPos;
     Vector3 directionPos;
+    public float centerx;
+	public GameObject manager;
 
-    // Start is called before the first frame update
     void Start()
-    {
-        delta = 0;
-        isMoving = false;
-    }
+	{
+		manager = GameObject.Find("ScoreManager");
+	}
 
     // Update is called once per frame
     void Update()
     {
         delta += Time.deltaTime;
-        if (delta > this.moveSpan)
+        if (delta > moveSpan)
         {
             delta = 0;
             isMoving = !isMoving;
             beforePos = gameObject.transform.position;
-            nextPos = new Vector3(Random.Range(-5, -2), Random.Range(1, 4), 0);
+            Vector3 nextPos = new Vector3(centerx + Random.Range(-2f, 2f), Random.Range(0f, 3f), 0);
             directionPos = nextPos - beforePos;
         }
 
@@ -35,13 +34,15 @@ public class VirusController : MonoBehaviour
         {
             float t = delta / moveSpan;
             float progress = t - Mathf.Sin(2 * Mathf.PI * t) / (2 * Mathf.PI);
-            Vector3 stepPos = directionPos * progress + beforePos;
-            transform.position = stepPos;
+            transform.position = directionPos * progress + beforePos;
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
+		ScoreUp();
+		Destroy(gameObject);
     }
+
+	public abstract void ScoreUp();
 }

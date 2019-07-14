@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5800080730238864164}
   - component: {fileID: 5800080730238864160}
   m_Layer: 0
-  m_Name: VirusPrefab
+  m_Name: Virus1Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,7 +112,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 5800080730238864165}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6be5f9eb7dab242aea030eeca64c4ce3, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -131,3 +131,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e43c1639982b4bc49a5c7767037a95e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  centerx: 0
