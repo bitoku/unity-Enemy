@@ -12,6 +12,11 @@ public class VirusGeneratorBase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (TimeManager.time > 30.0f)
+        {
+            return;
+        }
+
         delta += Time.deltaTime;
         if (delta > span)
         {
