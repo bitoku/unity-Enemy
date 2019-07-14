@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class VirusControllerLeft : VirusControllerBase
 {
-    void Start()
+    new void Start()
     {
 		base.Start();
         centerx = -3.333f;
